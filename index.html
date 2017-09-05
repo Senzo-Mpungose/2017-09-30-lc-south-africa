@@ -13,7 +13,7 @@ startdate: 2017-09-30      # machine-readable start date for the workshop in YYY
 enddate: 2017-10-01        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Tim Dennis","Juan Steyn"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Zine Sapula","Erika Mias","Kayleigh Roos"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: ["juan.steyn@nwu.ac.za"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+contact: ["juan.steyn@nwu.ac.za", "tdennis@library.ucla.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:   https://goo.gl/DgZXJo          # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
@@ -51,14 +51,14 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 
 <h2 id="general">General Information</h2>
 </br>
-<p>Thank your for your interest in this Library Carpentry workshop.</> 
+<p>Thank your for your interest in this Library Carpentry workshop.</>
 </br>
 <p>The workshop is jointly funded by the  <a href="https://goo.gl/MedPb8">South African Centre for Digital Language Resources</a> as well as the Rural Campus Connectivity Project and aims to create awareness about Library Carpentry and Digital Humanities.</p>
 <p>The workshop is organised by the <a href="http://digitalhumanities.org.za">Digital Humanities Organisation of Southern African</a> in collaboration with NWU-Digital Humanities and other organisations</p>
 </br>
 <p><strong>Please register</strong> for the workshop using this <a href="https://goo.gl/xwTpn7">online form</a>. Space is limited, if you have any questions please contact <a href="mailto:juan.steyn@nwu.ac.za?Subject=LC-South-Africa" target="_top">Juan.Steyn@nwu.ac.za</a>.
 </br>
-<p>The workshop is a precursor for the <a href="http://www.liasa.org.za/library-carpentry/">Library Carpentry Sprint</a> taking place on 2 October as part of the yearly <a href="http://www.liasa.org.za/liasa2017/">LIASA conference</a>.</> 
+<p>The workshop is a precursor for the <a href="http://www.liasa.org.za/library-carpentry/">Library Carpentry Sprint</a> taking place on 2 October as part of the yearly <a href="http://www.liasa.org.za/liasa2017/">LIASA conference</a>.</>
 <!--
   INTRODUCTION
 
@@ -201,12 +201,12 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 -->
 <h2 id="schedule">Schedule</h2>
 
-<!-- DO NOT EDIT SURVEY LINKS -->
+<!-- DO NOT EDIT SURVEY LINKS -
 <p><em>Surveys</em></p>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 <p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-
+-->
 
 
 <!--
@@ -236,7 +236,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   <div class="col-md-6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Shell Intro for Librarians</td> </tr>
+      <tr> <td>09:00</td>  <td>Tidy data for librarians</td> </tr>
       <tr> <td>10:30</td>  <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
       <tr> <td>13:00</td>  <td>OpenRefine for Librarians</td> </tr>
@@ -294,7 +294,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 {% elsif page.carpentry == "lc" %}
   {% include lc/syllabys.html %}
 {% endif %}
-
 -->
 
 
@@ -314,14 +313,14 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
     </ul>
   </div>
   <div class="col-md-6">
-    <h3 id="syllabus-shell">The Unix Shell</h3>
+    <h3 id="syllabus-shell">Tidy Data in Spreadsheets</h3>
     <ul>
-      <li>Files and directories</li>
-      <li>History and tab completion</li>
-      <li>Counting and sorting contents in files</li>
-      <li>Pipes and redirection</li>
-      <li>Mining or searching in files</li>
-      <li><a href="http://data-lessons.github.io/library-shell/reference/">Reference...</a></li>
+      <li>Good data practices for entry and formatting</li>
+      <li>Tidy data concepts</li>
+      <li>Working with multiple tables</li>
+      <li>Working with dates</li>
+      <li>Data validation and manipulation</li>
+      <li><a href="https://jezcope.github.io/library-spreadsheets/reference/">Reference...</a></li>
     </ul>
   </div>
 </div>
@@ -371,98 +370,40 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 </p>
 
 -->
-
-
-<div id="shell"> <!-- Start of 'shell' section. -->
-  <h3>The Bash Shell</h3>
-
-  <p>
-    Bash is a commonly-used shell that gives you the power to do simple
-    tasks more quickly.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="shell-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
-      <ol>
-        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps bellow:
-          <ol>
-            <!-- Git 2.8.2 Setup -->
-            <!-- Information -->
-            <li>Click on "Next".</li>
-            <!-- Select Components -->
-            <li>Click on "Next".</li>
-            <!-- Adjusting your PATH environment -->
-            <li>
-              <strong>
-                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
-              </strong>
-                If you forgot to do this programs that you need for the workshop will not work properly.
-                If this happens rerun the installer and select the appropriate option.
-            </li>
-            <!-- Choosing the SSH executable -->
-            <li>Click on "Next".</li>
-            <!-- Configuring the line ending conversions -->
-            <li>
-              <strong>
-                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
-              </strong>
-            </li>
-            <!-- Configuring the terminal emulator to use with Git Bash -->
-            <li>
-              <strong>
-                Keep "Use Windows' default console window" selected and click on "Next".
-              </strong>
-            </li>
-            <!-- Configuring experimental performance tweaks -->
-            <li>Click on "Install".</li>
-            <!-- Installing -->
-            <!-- Completing the Git Setup Wizard -->
-            <li>Click on "Finish".</li>
-          </ol>
-        </li>
-        <li>
-          If your "HOME" environment variable is not set (or you don't know what this is):
-          <ol>
-            <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press [Enter])</li>
-            <li>
-              Type the following line into the command prompt window exactly as shown:
-              <p><code>setx HOME "%USERPROFILE%"</code></p>
-            </li>
-            <li>Press [Enter], you should see <code>SUCCESS: Specified value was saved.</code></li>
-            <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
-          </ol>
-        </li>
-      </ol>
-      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="shell-macosx">Mac OS X</h4>
-      <p>
-        The default shell in all versions of Mac OS X is Bash, so no
-        need to install anything.  You access Bash from the Terminal
-        (found in
-        <code>/Applications/Utilities</code>).
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open the Terminal.
-        You may want to keep
-        Terminal in your dock for this workshop.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="shell-linux">Linux</h4>
-      <p>
-        The default shell is usually Bash, but if your
-        machine is set up differently you can run it by opening a
-        terminal and typing <code>bash</code>.  There is no need to
-        install anything.
-      </p>
-    </div>
-  </div>
-</div> 
-
+<div id="spreadsheets">
+<h3 id="spreadsheets">Spreadsheets</h3>
+<p>Spreadsheets are useful for data entry and data organization, and some subsetting and sorting of the data as well as getting an overview of the data. To interact with spreadsheets, we can use <a href="https://www.libreoffice.org">LibreOffice</a>, <a href="https://products.office.com/en-us/excel">Microsoft Excel</a>, <a href="http://www.gnumeric.org">Gnumeric</a>, <a href="https://www.openoffice.org">OpenOffice.org</a>, or other programs. Commands may differ a bit between programs, but general ideas for thinking about spreadsheets is the same.</p>
+<p>For this lesson, if you don't have a spreadsheet program already, you can use <a href="https://www.libreoffice.org">LibreOffice</a>. It's a free, open source spreadsheet program.</p>
+<div class="row">
+<div class="col-md-4" markdown="1">
+<h4 id="windows">Windows</h4>
+<ul>
+<li><strong>Download the Installer</strong><br />
+Install LibreOffice by going to the <a href="https://www.libreoffice.org/download/libreoffice-fresh/">installation page</a>. The version for Windows should automatically be selected. Click <strong>Download Version 4.4.2</strong>. You will go to a page that asks about a donation, but you don't need to make one. Your download should begin automatically.</li>
+<li><strong>Install LibreOffice</strong><br />
+Once the installer is downloaded, double click on it and it should install.</li>
+</ul>
+</div>
+<div class="col-md-4" markdown="1">
+<h4 id="macosx">Mac OS X</h4>
+<ul>
+<li><strong>Download the Installer</strong><br />
+Install LibreOffice by going to the <a href="https://www.libreoffice.org/download/libreoffice-fresh/">installation page</a>. The version for Mac OS X should automatically be selected. Click <strong>Download Version 4.4.2</strong>. You will go to a page that asks about a donation, but you don't need to make one. Your download should begin automatically.</li>
+<li><strong>Install LibreOffice</strong><br />
+The file <em>LibreOffice_4.4.2_MacOS_x86-64</em> should have been downloaded. Double click on this file, and LibreOffice will be installed.</li>
+</ul>
+</div>
+<div class="col-md-4" markdown="1">
+<h4 id="linux">Linux</h4>
+<ul>
+<li><strong>Download the Installer</strong><br />
+Install LibreOffice by going to the <a href="https://www.libreoffice.org/download/libreoffice-fresh/">installation page</a>. The version for Linux should automatically be selected. Click <strong>Download Version 4.4.2</strong>. You will go to a page that asks about a donation, but you don't need to make one. Your download should begin automatically.</li>
+<li><strong>Install LibreOffice</strong><br />
+Once the installer is downloaded, double click on it and it should install.</li>
+</ul>
+</div>
+</div>
+</div>
 <!-- End of 'shell' section. -->
 
 <!-- Start of 'editor' section.
@@ -487,9 +428,9 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
         nano is a basic editor and the default that instructors use in the workshop.
         To install it,
         download the <a href="https://github.com/swcarpentry/windows-installer/releases/download/v0.3/SWCarpentryInstaller.exe">
-          
+
           Library Carpentry
-          
+
           Windows installer
 	</a>
         and double click on the file to run it.
@@ -532,9 +473,9 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
       </p>
     </div>
   </div>
-</div> 
+</div>
 
-End of 'editor' section. 
+End of 'editor' section.
 
 -->
 
